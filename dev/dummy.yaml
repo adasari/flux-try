@@ -9,7 +9,6 @@ metadata:
 spec:
   releaseName: dummy-dev
   chart:
-    name: fluent/fluent-bit
     git: git@github.com:helm/charts
     path: stable/fluent-bit
     ref: master
