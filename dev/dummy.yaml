@@ -9,9 +9,9 @@ metadata:
 spec:
   releaseName: dummy-dev
   chart:
-    git: git@github.com:helm/charts
-    path: stable/fluent-bit
-    ref: master
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: nginx-ingress
+    version: 1.36.0
   values:
     image:
       tag: 1.5
