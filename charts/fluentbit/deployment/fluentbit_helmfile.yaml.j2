@@ -1,0 +1,9 @@
+name: fluentbit
+namespace: atom-fluentbit
+labels:
+  chart: fluentbit
+chart:  charts/fluentbit
+version: {{ SEM_RELEASE_VERSION_FLUENTBIT }}
+values:
+  - common:
+      registry: leader.telekube.local:5000/

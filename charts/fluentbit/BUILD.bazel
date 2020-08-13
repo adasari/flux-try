@@ -1,0 +1,24 @@
+load("//build/helmcharts:helpers.bzl", "release_chart")
+
+filegroup(
+    name = "chart_fg",
+    srcs = glob(
+        [
+            "**/*.*",
+        ],
+        exclude = [
+            "BUILD.bazel",
+            "setup.py",
+        ],
+    ),
+    tags = ["helm-charts"],
+    visibility = ["//visibility:public"],
+)
+
+release_chart(
+    name = "release",
+    chart_name = "fluentbit",
+    files = ":chart_fg",
+    tags = ["manual"],
+    visibility = ["//visibility:public"],
+)
