@@ -10,9 +10,9 @@ spec:
   releaseName: dummy-dev
   chart:
     name: fluent/fluent-bit
-   # git: git@github.com:fluxcd/helm-operator-get-started
-   # path: charts/podinfo
-   # ref: master
+    git: git@github.com:helm/charts.git
+    path: stable/fluent-bit
+    ref: master
   values:
     image:
       tag: 1.5
